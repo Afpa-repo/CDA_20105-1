@@ -21,20 +21,20 @@
             </tr>
         </thead>
         <tbody>
-        {% for f_r_personne in f_r_personnes %}
+        {% for personne in personnes %}
             <tr>
-                <td>{{ f_r_personne.id }}</td>
-                <td>{{ f_r_personne.personnesName }}</td>
-                <td>{{ f_r_personne.personnesLastName }}</td>
-                <td>{{ f_r_personne.personnesClientCategory }}</td>
-                <td>{{ f_r_personne.personnesClient }}</td>
-                <td>{{ f_r_personne.personnesTeam }}</td>
-                <td>{{ f_r_personne.personnesEmployee }}</td>
-                <td>{{ f_r_personne.personnesPassword }}</td>
-                <td>{{ f_r_personne.personnesEnableAccount }}</td>
+                <td>{{ personne.id }}</td>
+                <td>{{ personne.personnesName }}</td>
+                <td>{{ personne.personnesLastName }}</td>
+                <td>{{ personne.personnesClientCategory }}</td>
+                <td>{{ personne.personnesClient }}</td>
+                <td>{{ personne.personnesTeam }}</td>
+                <td>{{ personne.personnesEmployee }}</td>
+                <td>{{ personne.personnesPassword }}</td>
+                <td>{{ personne.personnesEnableAccount }}</td>
                 <td>
-                    <a href="{{ path('f_r_personnes_show', {'id': f_r_personne.id}) }}">show</a>
-                    <a href="{{ path('f_r_personnes_edit', {'id': f_r_personne.id}) }}">edit</a>
+                    <a href="{{ path('personnes_show', {'id': personne.id}) }}">show</a>
+                    <a href="{{ path('personnes_edit', {'id': personne.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -45,5 +45,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('f_r_personnes_new') }}">Create new</a>
+    <a href="{{ path('personnes_new') }}">Create new</a>
 {% endblock %}

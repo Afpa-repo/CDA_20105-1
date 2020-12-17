@@ -11,24 +11,24 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/f/r/products")
+ * @Route("/products")
  */
 class FRProductsController extends AbstractController
 {
     /**
-     * @Route("/", name="f_r_products_index", methods={"GET"})
+     * @Route("/", name="products_index", methods={"GET"})
      * @param FRProductsRepository $fRProductsRepository
      * @return Response
      */
     public function index(FRProductsRepository $fRProductsRepository): Response
     {
-        return $this->render('fr_products/index.html.twig', [
-            'f_r_products' => $fRProductsRepository->findAll(),
+        return $this->render('products/index.html.twig', [
+            'products' => $fRProductsRepository->findAll(),
         ]);
     }
 
     /**
-     * @Route("/new", name="f_r_products_new", methods={"GET","POST"})
+     * @Route("/new", name="products_new", methods={"GET","POST"})
      * @param Request $request
      * @return Response
      */
@@ -43,29 +43,29 @@ class FRProductsController extends AbstractController
             $entityManager->persist($fRProduct);
             $entityManager->flush();
 
-            return $this->redirectToRoute('f_r_products_index');
+            return $this->redirectToRoute('products_index');
         }
 
-        return $this->render('fr_products/new.html.twig', [
-            'f_r_product' => $fRProduct,
+        return $this->render('products/new.html.twig', [
+            'product' => $fRProduct,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="f_r_products_show", methods={"GET"})
+     * @Route("/{id}", name="products_show", methods={"GET"})
      * @param FRProducts $fRProduct
      * @return Response
      */
     public function show(FRProducts $fRProduct): Response
     {
-        return $this->render('fr_products/show.html.twig', [
-            'f_r_product' => $fRProduct,
+        return $this->render('products/show.html.twig', [
+            'product' => $fRProduct,
         ]);
     }
 
     /**
-     * @Route("/{id}/edit", name="f_r_products_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="products_edit", methods={"GET","POST"})
      * @param Request $request
      * @param FRProducts $fRProduct
      * @return Response
@@ -78,17 +78,17 @@ class FRProductsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('f_r_products_index');
+            return $this->redirectToRoute('products_index');
         }
 
-        return $this->render('fr_products/edit.html.twig', [
-            'f_r_product' => $fRProduct,
+        return $this->render('products/edit.html.twig', [
+            'product' => $fRProduct,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="f_r_products_delete", methods={"DELETE"})
+     * @Route("/{id}", name="products_delete", methods={"DELETE"})
      * @param Request $request
      * @param FRProducts $fRProduct
      * @return Response
@@ -101,6 +101,6 @@ class FRProductsController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('f_r_products_index');
+        return $this->redirectToRoute('products_index');
     }
 }

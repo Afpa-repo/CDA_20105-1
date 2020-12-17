@@ -20,19 +20,19 @@
             </tr>
         </thead>
         <tbody>
-        {% for f_r_product in f_r_products %}
+        {% for product in products %}
             <tr>
-                <td>{{ f_r_product.id }}</td>
-                <td>{{ f_r_product.productsReference }}</td>
-                <td>{{ f_r_product.productsDetails }}</td>
-                <td>{{ f_r_product.productsPurchasePrice }}</td>
-                <td>{{ f_r_product.productsSalePrice }}</td>
-                <td>{{ f_r_product.productsPicture }}</td>
-                <td>{{ f_r_product.productsStock }}</td>
-                <td>{{ f_r_product.productsVisible }}</td>
+                <td>{{ product.id }}</td>
+                <td>{{ product.productsReference }}</td>
+                <td>{{ product.productsDetails }}</td>
+                <td>{{ product.productsPurchasePrice }}</td>
+                <td>{{ product.productsSalePrice }}</td>
+                <td>{{ product.productsPicture }}</td>
+                <td>{{ product.productsStock }}</td>
+                <td>{{ product.productsVisible }}</td>
                 <td>
-                    <a href="{{ path('f_r_products_show', {'id': f_r_product.id}) }}">show</a>
-                    <a href="{{ path('f_r_products_edit', {'id': f_r_product.id}) }}">edit</a>
+                    <a href="{{ path('products_show', {'id': product.id}) }}">show</a>
+                    <a href="{{ path('products_edit', {'id': product.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -43,5 +43,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('f_r_products_new') }}">Create new</a>
+    <a href="{{ path('products_new') }}">Create new</a>
 {% endblock %}

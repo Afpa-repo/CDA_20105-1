@@ -9,46 +9,46 @@
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ f_r_personne.id }}</td>
+                <td>{{ personne.id }}</td>
             </tr>
             <tr>
                 <th>Personnes_Name</th>
-                <td>{{ f_r_personne.personnesName }}</td>
+                <td>{{ personne.personnesName }}</td>
             </tr>
             <tr>
                 <th>Personnes_LastName</th>
-                <td>{{ f_r_personne.personnesLastName }}</td>
+                <td>{{ personne.personnesLastName }}</td>
             </tr>
             <tr>
                 <th>Personnes_ClientCategory</th>
-                <td>{{ f_r_personne.personnesClientCategory }}</td>
+                <td>{{ personne.personnesClientCategory }}</td>
             </tr>
             <tr>
                 <th>Personnes_Client</th>
-                <td>{{ f_r_personne.personnesClient }}</td>
+                <td>{{ personne.personnesClient }}</td>
             </tr>
             <tr>
                 <th>Personnes_Team</th>
-                <td>{{ f_r_personne.personnesTeam }}</td>
+                <td>{{ personne.personnesTeam }}</td>
             </tr>
             <tr>
                 <th>Personnes_Employee</th>
-                <td>{{ f_r_personne.personnesEmployee }}</td>
+                <td>{{ personne.personnesEmployee }}</td>
             </tr>
             <tr>
                 <th>Personnes_Password</th>
-                <td>{{ f_r_personne.personnesPassword }}</td>
+                <td>{{ personne.personnesPassword }}</td>
             </tr>
             <tr>
                 <th>Personnes_EnableAccount</th>
-                <td>{{ f_r_personne.personnesEnableAccount }}</td>
+                <td>{{ personne.personnesEnableAccount }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('f_r_personnes_index') }}">back to list</a>
+    <a href="{{ path('personnes_index') }}">back to list</a>
 
-    <a href="{{ path('f_r_personnes_edit', {'id': f_r_personne.id}) }}">edit</a>
+    <a href="{{ path('personnes_edit', {'id': personne.id}) }}">edit</a>
 
-    {{ include('f_r_personnes/_delete_form.html.twig') }}
+    {{ include('personnes/_delete_form.html.twig') }}
 {% endblock %}

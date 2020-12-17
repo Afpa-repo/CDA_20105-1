@@ -11,22 +11,22 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/f/r/personnes")
+ * @Route("/personnes")
  */
 class FRPersonnesController extends AbstractController
 {
     /**
-     * @Route("/", name="f_r_personnes_index", methods={"GET"})
+     * @Route("/", name="personnes_index", methods={"GET"})
      */
     public function index(FRPersonnesRepository $fRPersonnesRepository): Response
     {
-        return $this->render('fr_personnes/index.html.twig', [
-            'f_r_personnes' => $fRPersonnesRepository->findAll(),
+        return $this->render('personnes/index.html.twig', [
+            'personnes' => $fRPersonnesRepository->findAll(),
         ]);
     }
 
     /**
-     * @Route("/new", name="f_r_personnes_new", methods={"GET","POST"})
+     * @Route("/new", name="personnes_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -42,24 +42,24 @@ class FRPersonnesController extends AbstractController
             return $this->redirectToRoute('f_r_personnes_index');
         }
 
-        return $this->render('fr_personnes/new.html.twig', [
-            'f_r_personne' => $fRPersonne,
+        return $this->render('personnes/new.html.twig', [
+            'personne' => $fRPersonne,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="f_r_personnes_show", methods={"GET"})
+     * @Route("/{id}", name="personnes_show", methods={"GET"})
      */
     public function show(FRPersonnes $fRPersonne): Response
     {
-        return $this->render('fr_personnes/show.html.twig', [
-            'f_r_personne' => $fRPersonne,
+        return $this->render('personnes/show.html.twig', [
+            'personne' => $fRPersonne,
         ]);
     }
 
     /**
-     * @Route("/{id}/edit", name="f_r_personnes_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="personnes_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, FRPersonnes $fRPersonne): Response
     {
@@ -69,17 +69,17 @@ class FRPersonnesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('f_r_personnes_index');
+            return $this->redirectToRoute('personnes_index');
         }
 
-        return $this->render('fr_personnes/edit.html.twig', [
-            'f_r_personne' => $fRPersonne,
+        return $this->render('personnes/edit.html.twig', [
+            'personne' => $fRPersonne,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="f_r_personnes_delete", methods={"DELETE"})
+     * @Route("/{id}", name="personnes_delete", methods={"DELETE"})
      */
     public function delete(Request $request, FRPersonnes $fRPersonne): Response
     {
@@ -89,6 +89,6 @@ class FRPersonnesController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('f_r_personnes_index');
+        return $this->redirectToRoute('personnes_index');
     }
 }
