@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FRPersonnes{% endblock %}
+
+{% block body %}
+    <h1>Create new FRPersonnes</h1>
+
+    {{ include('f_r_personnes/_form.html.twig') }}
+
+    <a href="{{ path('f_r_personnes_index') }}">back to list</a>
+{% endblock %}

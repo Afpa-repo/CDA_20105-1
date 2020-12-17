@@ -70,6 +70,11 @@ class FRPersonnes
      */
     private $fRReviews;
 
+    /**
+     * @ORM\Column(type="string", length=3)
+     */
+    private $personnes_EnableAccount;
+
     public function __construct()
     {
         $this->fRReviews = new ArrayCollection();
@@ -214,6 +219,18 @@ class FRPersonnes
                 $fRReview->setPersonne(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPersonnesEnableAccount(): ?string
+    {
+        return $this->personnes_EnableAccount;
+    }
+
+    public function setPersonnesEnableAccount(string $personnes_EnableAccount): self
+    {
+        $this->personnes_EnableAccount = $personnes_EnableAccount;
 
         return $this;
     }

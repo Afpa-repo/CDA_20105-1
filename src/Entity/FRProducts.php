@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FRProductsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -57,6 +59,16 @@ class FRProducts
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=FRSuppliers::class)
+     */
+    private $Suppliers;
+
+    public function __construct()
+    {
+        $this->Suppliers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -155,6 +167,30 @@ class FRProducts
     public function setCategory(?FRCategory $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|FRSuppliers[]
+     */
+    public function getSuppliers(): Collection
+    {
+        return $this->Suppliers;
+    }
+
+    public function addSupplier(FRSuppliers $supplier): self
+    {
+        if (!$this->Suppliers->contains($supplier)) {
+            $this->Suppliers[] = $supplier;
+        }
+
+        return $this;
+    }
+
+    public function removeSupplier(FRSuppliers $supplier): self
+    {
+        $this->Suppliers->removeElement($supplier);
 
         return $this;
     }

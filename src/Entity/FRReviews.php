@@ -27,6 +27,16 @@ class FRReviews
      */
     private $personne;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $reviews_comments;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $reviews_Rate;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +62,30 @@ class FRReviews
     public function setPersonne(?FRPersonnes $personne): self
     {
         $this->personne = $personne;
+
+        return $this;
+    }
+
+    public function getReviewsComments(): ?string
+    {
+        return $this->reviews_comments;
+    }
+
+    public function setReviewsComments(?string $reviews_comments): self
+    {
+        $this->reviews_comments = $reviews_comments;
+
+        return $this;
+    }
+
+    public function getReviewsRate(): ?int
+    {
+        return $this->reviews_Rate;
+    }
+
+    public function setReviewsRate(int $reviews_Rate): self
+    {
+        $this->reviews_Rate = $reviews_Rate;
 
         return $this;
     }

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FRPersonnes index{% endblock %}
+
+{% block body %}
+    <h1>FRPersonnes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Personnes_Name</th>
+                <th>Personnes_LastName</th>
+                <th>Personnes_ClientCategory</th>
+                <th>Personnes_Client</th>
+                <th>Personnes_Team</th>
+                <th>Personnes_Employee</th>
+                <th>Personnes_Password</th>
+                <th>Personnes_EnableAccount</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for f_r_personne in f_r_personnes %}
+            <tr>
+                <td>{{ f_r_personne.id }}</td>
+                <td>{{ f_r_personne.personnesName }}</td>
+                <td>{{ f_r_personne.personnesLastName }}</td>
+                <td>{{ f_r_personne.personnesClientCategory }}</td>
+                <td>{{ f_r_personne.personnesClient }}</td>
+                <td>{{ f_r_personne.personnesTeam }}</td>
+                <td>{{ f_r_personne.personnesEmployee }}</td>
+                <td>{{ f_r_personne.personnesPassword }}</td>
+                <td>{{ f_r_personne.personnesEnableAccount }}</td>
+                <td>
+                    <a href="{{ path('f_r_personnes_show', {'id': f_r_personne.id}) }}">show</a>
+                    <a href="{{ path('f_r_personnes_edit', {'id': f_r_personne.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('f_r_personnes_new') }}">Create new</a>
+{% endblock %}

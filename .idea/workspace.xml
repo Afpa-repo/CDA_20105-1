@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbf0321e-c52b-443e-83c9-a0d855ec5fd6" name="Default Changelist" comment="" />
+    <list default="true" id="fbf0321e-c52b-443e-83c9-a0d855ec5fd6" name="Default Changelist" comment="bdd">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201217140351.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201217143158.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201217143513.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201217145116.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FRProductsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/FRPersonnesType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/FRProductsType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_personnes/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_personnes/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_personnes/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_personnes/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_personnes/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_personnes/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_products/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_products/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_products/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_products/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_products/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fr_products/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/43efc4ce-4826-4203-aa43-11b013a884ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/43efc4ce-4826-4203-aa43-11b013a884ff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRCustomerReviews.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRProducts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRReviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRReviews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRSubCategory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/FRCustomerReviewsRepository.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
@@ -152,8 +182,16 @@
       <workItem from="1608131638165" duration="1208000" />
       <workItem from="1608132868374" duration="1051000" />
       <workItem from="1608194519267" duration="250000" />
-      <workItem from="1608194808571" duration="10293000" />
+      <workItem from="1608194808571" duration="17730000" />
     </task>
+    <task id="LOCAL-00001" summary="bdd">
+      <created>1608207108521</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608207108521</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,5 +207,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="bdd" />
   </component>
 </project>

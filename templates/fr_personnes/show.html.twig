@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FRPersonnes{% endblock %}
+
+{% block body %}
+    <h1>FRPersonnes</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ f_r_personne.id }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_Name</th>
+                <td>{{ f_r_personne.personnesName }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_LastName</th>
+                <td>{{ f_r_personne.personnesLastName }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_ClientCategory</th>
+                <td>{{ f_r_personne.personnesClientCategory }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_Client</th>
+                <td>{{ f_r_personne.personnesClient }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_Team</th>
+                <td>{{ f_r_personne.personnesTeam }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_Employee</th>
+                <td>{{ f_r_personne.personnesEmployee }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_Password</th>
+                <td>{{ f_r_personne.personnesPassword }}</td>
+            </tr>
+            <tr>
+                <th>Personnes_EnableAccount</th>
+                <td>{{ f_r_personne.personnesEnableAccount }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('f_r_personnes_index') }}">back to list</a>
+
+    <a href="{{ path('f_r_personnes_edit', {'id': f_r_personne.id}) }}">edit</a>
+
+    {{ include('f_r_personnes/_delete_form.html.twig') }}
+{% endblock %}
