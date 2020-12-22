@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbf0321e-c52b-443e-83c9-a0d855ec5fd6" name="Default Changelist" comment=" bdd + relations">
+    <list default="true" id="fbf0321e-c52b-443e-83c9-a0d855ec5fd6" name="Default Changelist" comment="chemins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FRProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FRProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_personnes/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_personnes/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_personnes/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_personnes/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_personnes/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_personnes/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_products/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_products/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_products/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_products/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_products/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fr_products/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201217091410.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201217091410.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +141,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -168,7 +155,11 @@
       <workItem from="1608131638165" duration="1208000" />
       <workItem from="1608132868374" duration="1051000" />
       <workItem from="1608194519267" duration="250000" />
-      <workItem from="1608194808571" duration="19716000" />
+      <workItem from="1608194808571" duration="19867000" />
+      <workItem from="1608283983747" duration="2072000" />
+      <workItem from="1608542852251" duration="1456000" />
+      <workItem from="1608545852197" duration="1483000" />
+      <workItem from="1608637955141" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="bdd">
       <created>1608207108521</created>
@@ -184,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608218379213</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="chemins">
+      <created>1608220452999</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608220452999</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,11 +198,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bdd" />
     <MESSAGE value=" bdd + relations" />
-    <option name="LAST_COMMIT_MESSAGE" value=" bdd + relations" />
+    <MESSAGE value="chemins" />
+    <option name="LAST_COMMIT_MESSAGE" value="chemins" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
