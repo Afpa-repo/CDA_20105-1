@@ -26,14 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ede5dcdf-b06d-455a-86e7-9c35ea42b308" name="Default Changelist" comment="Fixtures TG">
-      <change afterPath="$PROJECT_DIR$/.idea/CDA_20105-1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201217143158.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201217143158.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+    <list default="true" id="ede5dcdf-b06d-455a-86e7-9c35ea42b308" name="Default Changelist" comment="TG Home">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2020_14_55_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2020_14_55__Default_Changelist_.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +177,7 @@
       <updated>1608711756714</updated>
       <workItem from="1608711758041" duration="1340000" />
       <workItem from="1608713234369" duration="688000" />
-      <workItem from="1608713934216" duration="16483000" />
+      <workItem from="1608713934216" duration="16801000" />
     </task>
     <task id="LOCAL-00001" summary="Fixtures TG">
       <created>1608731391903</created>
@@ -191,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608731391903</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="TG Home">
+      <created>1608738732870</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608738732870</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +226,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Fixtures TG" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixtures TG" />
+    <MESSAGE value="TG Home" />
+    <option name="LAST_COMMIT_MESSAGE" value="TG Home" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608731428979">
