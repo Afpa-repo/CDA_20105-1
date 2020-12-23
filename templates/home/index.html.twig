@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<h1 class="d-flex justify-content-center py-5">Bienvenue</h1>
+
+
+
+
+
+<div class="row">
+    <div class="col-6">
+        <div class="row mx-0">
+            <nav class="w-100 navbar navbar-expand-lg navbar-dark bg-primary rounded">
+                {#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">#}
+                {#            <span class="navbar-toggler-icon"></span>#}
+                {#        </button>#}
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="card text-center my-3">
+            <div class="card-header">
+                <h2>Livres</h2>
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Nos Nouveautés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Les plus vendus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Nos propositions</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><h5 class="card-title">Produit</h5></div>
+                    <div class="card-body">
+                        <img class="card-img" src="http://placehold.it/150x150" alt="Card image">
+                        <p class="card-text pt-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+
+    </div>
+</div>
+{% endblock %}
