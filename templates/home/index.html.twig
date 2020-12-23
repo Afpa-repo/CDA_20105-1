@@ -5,10 +5,6 @@
 {% block body %}
 <h1 class="d-flex justify-content-center py-5">Bienvenue</h1>
 
-
-
-
-
 <div class="row">
     <div class="col-6">
         <div class="row mx-0">
@@ -18,18 +14,13 @@
                 {#        </button>#}
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav mr-auto">
+                        {% for category in categorys %}
+                        {% if category.category != null %}
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="#">{{ category.categoryName }}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
+                        {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
             </nav>
