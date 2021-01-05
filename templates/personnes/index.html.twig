@@ -1,49 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}FRPersonnes index{% endblock %}
+{% block title %}Connexion/Inscription{% endblock %}
 
 {% block body %}
-    <h1>FRPersonnes index</h1>
+    <h1 class="m-5 text-center">Connexion / Inscription</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Personnes_Name</th>
-                <th>Personnes_LastName</th>
-                <th>Personnes_ClientCategory</th>
-                <th>Personnes_Client</th>
-                <th>Personnes_Team</th>
-                <th>Personnes_Employee</th>
-                <th>Personnes_Password</th>
-                <th>Personnes_EnableAccount</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for personne in personnes %}
-            <tr>
-                <td>{{ personne.id }}</td>
-                <td>{{ personne.personnesName }}</td>
-                <td>{{ personne.personnesLastName }}</td>
-                <td>{{ personne.personnesClientCategory }}</td>
-                <td>{{ personne.personnesClient }}</td>
-                <td>{{ personne.personnesTeam }}</td>
-                <td>{{ personne.personnesEmployee }}</td>
-                <td>{{ personne.personnesPassword }}</td>
-                <td>{{ personne.personnesEnableAccount }}</td>
-                <td>
-                    <a href="{{ path('personnes_show', {'id': personne.id}) }}">show</a>
-                    <a href="{{ path('personnes_edit', {'id': personne.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="10">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="container w-50">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Nouveau ?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#profile">Déjà inscrit ?</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content mt-5">
+            <div class="tab-pane fade active show" id="home">
+                <div class="d-flex justify-content-center">
+                    {{ include('../s') }}
 
-    <a href="{{ path('personnes_new') }}">Create new</a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation
+                    +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+                    craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+                    ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus
+                    mollit.</p>
+            </div>
+        </div
+    </div>
+
 {% endblock %}

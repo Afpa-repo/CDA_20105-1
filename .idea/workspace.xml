@@ -26,28 +26,35 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be2aced5-2763-4721-978d-af102310e878" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CDA_20105-2.iml" afterDir="false" />
+    <list default="true" id="ede5dcdf-b06d-455a-86e7-9c35ea42b308" name="Default Changelist" comment="TG Home">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210105133401.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CDA_20105-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CDA_20105-1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2020_14_55_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2020_14_55__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201216152424.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201216152424.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201217085839.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201217085839.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201217143158.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201217143158.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRContactDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRContactDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/FRPersonnesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FRPersonnesType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personnes/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -162,37 +169,58 @@
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
-      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1m66Eq9AFlXpas5qWbe4UXA9jTW" />
+  <component name="ProjectId" id="1m3AAN0ujZaLPTJtKZCqBnyWe7h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="be2aced5-2763-4721-978d-af102310e878" name="Default Changelist" comment="" />
-      <created>1608801584669</created>
+      <changelist id="ede5dcdf-b06d-455a-86e7-9c35ea42b308" name="Default Changelist" comment="" />
+      <created>1608711756714</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608801584669</updated>
-      <workItem from="1608801585716" duration="11083000" />
-      <workItem from="1609752806991" duration="17821000" />
+      <updated>1608711756714</updated>
+      <workItem from="1608711758041" duration="1340000" />
+      <workItem from="1608713234369" duration="688000" />
+      <workItem from="1608713934216" duration="16801000" />
+      <workItem from="1609834000419" duration="21245000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixtures TG">
+      <created>1608731391903</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608731391903</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TG Home">
+      <created>1608738732870</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608738732870</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,10 +250,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609757051358">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609757051358" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Fixtures TG" />
+    <MESSAGE value="TG Home" />
+    <option name="LAST_COMMIT_MESSAGE" value="TG Home" />
   </component>
 </project>
