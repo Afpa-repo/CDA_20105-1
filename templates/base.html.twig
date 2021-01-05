@@ -1,30 +1,180 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="{{ path('home') }}">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('asset/css/base.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<img src="{{ asset('asset/image/logofilrouge.png') }}" id="logo">
+<div class="container-fluid">
 
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        {#<div class="container d-flex justify-content-center">
+            <form class="form-inline mx-auto pl-5 my-2 my-lg-0 justify-content-center w-100">
+                <input class="form-control mr-sm-2 col-8" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0 col-2" type="submit">Search</button>
+            </form>
+        </div>#}
+        <div class="row align-items-center d-flex justify-content-end w-100">
+
+            <a href="#"><img src="{{ asset('asset/image/user.png') }}" class="pr-5 w-75" alt=""></a>
+            <a href="#"><img src="{{ asset('asset/image/panier.png') }}" class="pr-5 w-75" alt=""></a>
+            <form class="form-inline">
+                <img data-toggle="modal" data-target="#exampleModal" class="w-50" src="{{ asset('asset/image/loupe.png') }}">
+
+            </form>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Recherche</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" name="search" placeholder="Search..">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-primary">Valider</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        {% block body %}{% endblock %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mx-auto w-100">
+                <li class="nav-item active mx-auto w-75">
+                    {#<img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50">#}
+                    <a class="nav-link pr-5" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    {#<img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50">#}
+                    <a class="nav-link pr-5" href="#">Catalogue</a>
+                </li>
+                <li class="nav-item mx-auto w-75">
+                    {#<img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50">#}
+                    <a class="nav-link pr-5" href="#">Infos</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+</div>
+
+
+{% block body %}
+
+{% endblock %}
+<footer class="container-fluid bg-primary">
+    <div class="row d-flex justify-content-around col-12 my-auto align-item-center">
+        <a href="#">
+            <p class="nav-link d-inline">Mention légale</p>
+        </a>
+        <nav class="navbar navbar-light">
+            <form class="form-inline">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </form>
+        </nav>
+        <div>
+            <h4><strong>Suivez-nous</strong> ici!</h4>
+            <a href="#"> <img src="{{ asset('') }}" class=""> </a>
+            <a href="#"><img src="{{ asset('') }}" class=""></a>
+        </div>
     </div>
-        {% block javascripts %}
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        {% endblock %}
-    </body>
+    <div class="row d-flex justify-content-start col-12 my-auto">
+        <div class="container col-3">
+            <h4>Contactez-nous</h4>
+            <p>Conseil / Commande téléphone
+                du lundi au vendredi de 8h à 19h, le samedi de 10h à 18h.</p>
+            <br>
+            <p>
+                Depuis la France :
+                <strong>02 40 38 50 50</strong>
+            </p>
+            <br>
+            <p>
+                Belgique, Suisse, International :
+              <strong>0033 2 40 38 50 50</strong>
+            </p>
+            <br>
+            <p>Service après vente :
+              <strong>02 51 80 68 76</strong>
+                Contactez-nous par téléphone du lundi au samedi de 9h à 18h ou depuis votre compte client.</p>
+            <br>
+            <p>Conseils pour choisir un instrument :
+                infovg@villagegreen.com</p>
+            <br>
+            <p>
+                Service Presse :
+                contact@villagegreen.com
+            </p>
+
+        </div>
+        <div class="container col-3">
+            <h4>Milles et une pages Stores</h4>
+            <p>
+                Guitares - Amplificateurs - Effets :
+                182 avenue Jean Jaurès 75019 Paris
+                <br>
+                Clavier - Home Studio - Sonorisation Equipement DJ - Eclairage :
+                184 avenue Jean Jaurès 75019 Paris
+                <br>
+                Librairie Musicale :
+                7 av. du Nouveau Conservatoire 75019 Paris
+                <br>
+                Instruments à vent :
+                9/11 av. du Nouveau Conservatoire 75019 Paris
+                <br>
+                Percussions :
+                13/15 av. du Nouveau Conservatoire 75019 Paris
+                Métro Ligne 5, station Porte de Pantin. Plan d'accès / Visite virtuelle
+            </p>
+        </div>
+        <div class="container col-3">
+            <h4>Contactez-nous</h4>
+            <p>
+
+            </p>
+        </div>
+        <div class="container col-3">
+            <h4>Contactez-nous</h4>
+            <p>
+
+            </p>
+        </div>
+    </div>
+</footer>
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+{% endblock %}
+</body>
 </html>
