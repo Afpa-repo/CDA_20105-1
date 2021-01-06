@@ -52,10 +52,6 @@ class FRContactDetails
      */
     private $contactDetails_PhoneNumber;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $contactDetails_Email;
 
     public function getId(): ?int
     {
@@ -146,15 +142,4 @@ class FRContactDetails
         return $this;
     }
 
-    public function getContactDetailsEmail(): ?string
-    {
-        return $this->contactDetails_Email;
-    }
-
-    public function setContactDetailsEmail(string $contactDetails_Email): self
-    {
-        $this->contactDetails_Email = $contactDetails_Email;
-
-        return $this;
-    }
 }

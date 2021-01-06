@@ -20,7 +20,7 @@ final class Version20201217100353 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE frpersonnes ADD contact_details_id INT NOT NULL');
+        $this->addSql('ALTER TABLE frpersonnes ADD contact_details_id INT NULL');
         $this->addSql('ALTER TABLE frpersonnes ADD CONSTRAINT FK_ECE752B77CA35EB5 FOREIGN KEY (contact_details_id) REFERENCES frcontact_details (id)');
         $this->addSql('CREATE INDEX IDX_ECE752B77CA35EB5 ON frpersonnes (contact_details_id)');
     }

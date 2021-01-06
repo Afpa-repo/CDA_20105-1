@@ -6,6 +6,7 @@ use App\Repository\FRPersonnesRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=FRPersonnesRepository::class)
@@ -26,11 +27,13 @@ class FRPersonnes
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Regex("/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/")
      */
     private $personnes_LastName;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
+     * @Assert\Regex("/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/")
      */
     private $personnes_ClientCategory;
 
@@ -51,8 +54,16 @@ class FRPersonnes
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Regex("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/")
+     * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimum 8 caractères")
      */
     private $personnes_Password;
+
+    /**
+     * @Assert\Regex("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/")
+     * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimum 8 caractères")
+     */
+    public $confirm_password;
 
     /**
      * @ORM\ManyToOne(targetEntity=FRPersonnes::class)
@@ -61,7 +72,6 @@ class FRPersonnes
 
     /**
      * @ORM\ManyToOne(targetEntity=FRContactDetails::class)
-     * @ORM\JoinColumn(nullable=false)
      */
     private $contactDetails;
 
@@ -74,6 +84,12 @@ class FRPersonnes
      * @ORM\Column(type="string", length=3)
      */
     private $personnes_EnableAccount;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $personnes_Email;
+
 
     public function __construct()
     {
@@ -126,7 +142,7 @@ class FRPersonnes
         return $this->personnes_Client;
     }
 
-    public function setPersonnesClient(string $personnes_Client): self
+    public function setPersonnesClient(string $personnes_Client ): self
     {
         $this->personnes_Client = $personnes_Client;
 
@@ -231,6 +247,18 @@ class FRPersonnes
     public function setPersonnesEnableAccount(string $personnes_EnableAccount): self
     {
         $this->personnes_EnableAccount = $personnes_EnableAccount;
+
+        return $this;
+    }
+
+    public function getPersonnesEmail(): ?string
+    {
+        return $this->personnes_Email;
+    }
+
+    public function setPersonnesEmail(string $personnes_Email): self
+    {
+        $this->personnes_Email = $personnes_Email;
 
         return $this;
     }

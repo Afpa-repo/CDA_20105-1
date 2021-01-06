@@ -26,7 +26,6 @@ class FRCategory
 
     /**
      * @ORM\ManyToOne(targetEntity=FRCategory::class, inversedBy="CategoryFK")
-     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
