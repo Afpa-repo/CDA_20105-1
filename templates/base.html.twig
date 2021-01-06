@@ -20,10 +20,10 @@
         </div>#}
         <div class="row align-items-center d-flex justify-content-end w-100">
 
-            <a href="#"><img src="{{ asset('asset/image/user.png') }}" class="pr-5 w-75" alt=""></a>
-            <a href="#"><img src="{{ asset('asset/image/panier.png') }}" class="pr-5 w-75" alt=""></a>
+            <a href="#"><img src="{{ asset('asset/image/user.png') }}" class="pr-md-5 pr-2 w-75" alt=""></a>
+            <a href="#"><img src="{{ asset('asset/image/panier.png') }}" class="pr-md-5 pr-2 w-75" alt=""></a>
             <form class="form-inline">
-                <img data-toggle="modal" data-target="#exampleModal" class="w-50" src="{{ asset('asset/image/loupe.png') }}">
+                <img data-toggle="modal" data-target="#exampleModal" class="w-50" src="{{ asset('asset/image/loupe.svg') }}">
 
             </form>
         </div>
@@ -83,11 +83,12 @@
 {% endblock %}
 <footer class="container-fluid bg-primary">
     <div class="row d-flex justify-content-around col-12 my-auto align-item-center">
-        <a href="#">
-            <p class="nav-link d-inline">Mention légale</p>
+        <a href="#" class="">
+            <p class="text-center pt-5">Mention légale</p>
         </a>
-        <nav class="navbar navbar-light">
-            <form class="form-inline">
+        <nav class="navbar navbar-ligh" id="email_footer">
+            <h4 class="d-block col-12">Recevez nos offres exclusives</h4>
+            <form class="form-inline d-block">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">@</span>
@@ -96,10 +97,10 @@
                 </div>
             </form>
         </nav>
-        <div>
-            <h4><strong>Suivez-nous</strong> ici!</h4>
-            <a href="#"> <img src="{{ asset('') }}" class=""> </a>
-            <a href="#"><img src="{{ asset('') }}" class=""></a>
+        <div class="align-items-center">
+            <h4 class=""><strong>Suivez-nous</strong> ici!</h4>
+            <a href="#"> <img src="{{ asset('asset/image/twitterlogo.png') }}" class=" w-25"> </a>
+            <a href="#"><img src="{{ asset('asset/image/facebooklogo.png') }}" class="w-25"></a>
         </div>
     </div>
     <div class="row d-flex justify-content-start col-12 my-auto">
@@ -149,12 +150,6 @@
                 Percussions :
                 13/15 av. du Nouveau Conservatoire 75019 Paris
                 Métro Ligne 5, station Porte de Pantin. Plan d'accès / Visite virtuelle
-            </p>
-        </div>
-        <div class="container col-3">
-            <h4>Contactez-nous</h4>
-            <p>
-
             </p>
         </div>
         <div class="container col-3">

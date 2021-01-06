@@ -1,8 +1,8 @@
 #logo {
     position: absolute;
-    top: -93px;
-    right: 81%;
-    width: 33%;
+    top: -45px;
+    left: -11em;
+    width: 490px;
     z-index: 100;
 }
 /*.navbar {
@@ -48,6 +48,10 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-out;
     transition: width 0.4s ease-in-out;
 }
+
+#email_footer {
+    width: 30%;
+    padding-left: 10%;}
 
 
 
