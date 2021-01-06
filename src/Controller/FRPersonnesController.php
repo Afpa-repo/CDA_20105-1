@@ -15,11 +15,6 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class FRPersonnesController extends AbstractController
 {
-    public function __construct() {
-        $this->personnes_Client = 'oui';
-        $this->personnes_Employee ='non';
-        $this->personnes_EnableAccount ='non';
-    }
 
     /**
      * @Route("/", name="profil_index", methods={"GET"})

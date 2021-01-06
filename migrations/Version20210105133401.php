@@ -20,7 +20,7 @@ final class Version20210105133401 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE frcategory CHANGE category_id category_id INT NOT NULL');
+        $this->addSql('ALTER TABLE frcategory CHANGE category_id category_id INT NULL');
         $this->addSql('ALTER TABLE frcontact_details DROP contact_details_email');
         $this->addSql('ALTER TABLE frpersonnes ADD personnes_email VARCHAR(255) NOT NULL');
     }

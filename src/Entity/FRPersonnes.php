@@ -27,11 +27,13 @@ class FRPersonnes
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Regex("/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/")
      */
     private $personnes_LastName;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
+     * @Assert\Regex("/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/")
      */
     private $personnes_ClientCategory;
 
@@ -52,10 +54,15 @@ class FRPersonnes
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Regex("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/")
      * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimum 8 caractères")
      */
     private $personnes_Password;
 
+    /**
+     * @Assert\Regex("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/")
+     * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimum 8 caractères")
+     */
     public $confirm_password;
 
     /**
@@ -65,7 +72,6 @@ class FRPersonnes
 
     /**
      * @ORM\ManyToOne(targetEntity=FRContactDetails::class)
-     * @ORM\JoinColumn(nullable=false)
      */
     private $contactDetails;
 
@@ -136,7 +142,7 @@ class FRPersonnes
         return $this->personnes_Client;
     }
 
-    public function setPersonnesClient(string $personnes_Client): self
+    public function setPersonnesClient(string $personnes_Client ): self
     {
         $this->personnes_Client = $personnes_Client;
 

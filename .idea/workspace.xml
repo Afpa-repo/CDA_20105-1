@@ -27,8 +27,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be2aced5-2763-4721-978d-af102310e878" name="Default Changelist" comment="TG Index2">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210106093431.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201217100353.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201217100353.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210105133401.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210105133401.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/FRPersonnesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FRPersonnesType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +166,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1m66Eq9AFlXpas5qWbe4UXA9jTW" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -166,10 +174,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -222,13 +232,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="TG Index2" />
     <option name="LAST_COMMIT_MESSAGE" value="TG Index2" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609757051358">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609757051358" />
   </component>
 </project>
