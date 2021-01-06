@@ -1,0 +1,57 @@
+#logo {
+    position: absolute;
+    top: -45px;
+    left: -11em;
+    width: 490px;
+    z-index: 100;
+}
+/*.navbar {
+    margin-bottom: 150px;
+}*/
+
+.nav-item {
+    text-align: center;
+}
+
+ul li {
+    font-size: 1.5em;
+}
+
+.container {
+    /*
+    display: block!important;
+    */
+
+}
+
+/*
+.nav-item {
+    background-image: url("../image/nav_titre.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
+
+footer div a p {
+    color: white;
+}
+
+/*span {*/
+/*    color: white;*/
+/*}*/
+
+/*input[type=text]:hover {*/
+/*    width: 100%;*/
+/*}*/
+
+/*input[type=text] {*/
+/*    width: 130px;*/
+/*    -webkit-transition: width 0.4s ease-out;*/
+/*    transition: width 0.4s ease-in-out;*/
+/*}*/
+
+#email_footer {
+    width: 30%;
+    padding-left: 10%;}
+
+
+

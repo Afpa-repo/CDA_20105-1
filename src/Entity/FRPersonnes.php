@@ -62,6 +62,7 @@ class FRPersonnes
     /**
      * @Assert\Regex("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/")
      * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimum 8 caractères")
+     * @Assert\EqualTo(propertyPath="personnes_Password", message="Votre mot de passe n'est pas identique")
      */
     public $confirm_password;
 
