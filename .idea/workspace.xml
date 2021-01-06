@@ -26,17 +26,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be2aced5-2763-4721-978d-af102310e878" name="Default Changelist" comment="TG Index2">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210106093431.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="be2aced5-2763-4721-978d-af102310e878" name="Default Changelist" comment="ZB bdd maj">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2021_16_32__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2021_16_32__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201217100353.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201217100353.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210105133401.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210105133401.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/asset/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/asset/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/FRPersonnesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FRPersonnesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609861563151</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ZB bdd maj">
+      <created>1609938573044</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609938573044</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +236,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="TG Index2" />
-    <option name="LAST_COMMIT_MESSAGE" value="TG Index2" />
+    <MESSAGE value="ZB bdd maj" />
+    <option name="LAST_COMMIT_MESSAGE" value="ZB bdd maj" />
   </component>
 </project>

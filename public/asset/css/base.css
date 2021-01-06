@@ -21,7 +21,7 @@ ul li {
     /*
     display: block!important;
     */
-    width: 30%!important;
+
 }
 
 /*
@@ -35,19 +35,19 @@ footer div a p {
     color: white;
 }
 
-span {
-    color: white;
-}
+/*span {*/
+/*    color: white;*/
+/*}*/
 
-input[type=text]:hover {
-    width: 100%;
-}
+/*input[type=text]:hover {*/
+/*    width: 100%;*/
+/*}*/
 
-input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-out;
-    transition: width 0.4s ease-in-out;
-}
+/*input[type=text] {*/
+/*    width: 130px;*/
+/*    -webkit-transition: width 0.4s ease-out;*/
+/*    transition: width 0.4s ease-in-out;*/
+/*}*/
 
 #email_footer {
     width: 30%;
