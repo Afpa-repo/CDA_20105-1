@@ -65,6 +65,16 @@ class FRProducts
      */
     private $Suppliers;
 
+    /**
+     * @ORM\Column(type="decimal", precision=5, scale=2, nullable=true)
+     */
+    private $products_AverageGrade;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $products_DateAdded;
+
     public function __construct()
     {
         $this->Suppliers = new ArrayCollection();
@@ -191,6 +201,30 @@ class FRProducts
     public function removeSupplier(FRSuppliers $supplier): self
     {
         $this->Suppliers->removeElement($supplier);
+
+        return $this;
+    }
+
+    public function getProductsAverageGrade(): ?string
+    {
+        return $this->products_AverageGrade;
+    }
+
+    public function setProductsAverageGrade(?string $products_AverageGrade): self
+    {
+        $this->products_AverageGrade = $products_AverageGrade;
+
+        return $this;
+    }
+
+    public function getProductsDateAdded(): ?\DateTimeInterface
+    {
+        return $this->products_DateAdded;
+    }
+
+    public function setProductsDateAdded(\DateTimeInterface $products_DateAdded): self
+    {
+        $this->products_DateAdded = $products_DateAdded;
 
         return $this;
     }
