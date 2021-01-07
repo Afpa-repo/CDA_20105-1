@@ -2,88 +2,52 @@
 
 namespace App\Controller;
 
-use App\Entity\FRPersonnes;
-use App\Form\FRPersonnesType;
-use App\Repository\FRPersonnesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\FRPersonnes;
+use App\Form\FRPersonnesType;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-/**
- * @Route("/profil")
- */
 class FRPersonnesController extends AbstractController
 {
-
     /**
-     * @Route("/", name="profil_index", methods={"GET"})
+     * @Route("/inscription", name="security_registration")
+     * @param Request $request
+     * @param UserPasswordEncoderInterface $encoder
+     * @return Response
      */
-    public function index(FRPersonnesRepository $PersonnesRepository): Response
+    public function registration(Request $request, UserPasswordEncoderInterface $encoder): Response
     {
         $personne = new FRPersonnes();
         $form = $this->createForm(FRPersonnesType::class, $personne);
         $form->handleRequest($request);
-        return $this->render('personnes/index.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/new", name="personnes_new", methods={"GET","POST"})
-     */
-    public function new(Request $request): Response
-    {
-        $fRPersonne = new FRPersonnes();
-        $form = $this->createForm(FRPersonnesType::class, $fRPersonne);
-        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $personne->setPersonnesClient('oui');
+            $personne->setPersonnesEmployee('non');
+            $personne->setPersonnesEnableAccount('non');
+
+            $hash = $encoder->encodePassword($personne, $personne->getPersonnesPassword());
+            $personne->setPersonnesPassword($hash);
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($personne);
             $entityManager->flush();
-
-            return $this->redirectToRoute('personnes_index');
         }
 
-        return $this->render('personnes/new.html.twig', [
-            'personne' => $fRPersonne,
-            'form' => $form->createView(),
+        return $this->render('personnes/registration.html.twig', [
+            'personne' => $personne,
+            'form' => $form->createView()
         ]);
     }
 
-
-    /**
-     * @Route("/{id}/edit", name="personnes_edit", methods={"GET","POST"})
-     */
-    public function edit(Request $request, FRPersonnes $fRPersonne): Response
+    public function login()
     {
-        $form = $this->createForm(FRPersonnesType::class, $fRPersonne);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('personnes_index');
-        }
-
-        return $this->render('personnes/edit.html.twig', [
-            'personne' => $fRPersonne,
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="personnes_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, FRPersonnes $fRPersonne): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$fRPersonne->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($fRPersonne);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('personnes_index');
+        return $this->render('personnes/login.html.twig');
     }
 }
+
+
+
