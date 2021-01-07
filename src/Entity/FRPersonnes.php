@@ -6,12 +6,18 @@ use App\Repository\FRPersonnesRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=FRPersonnesRepository::class)
+ * @UniqueEntity(
+ *     fields={"personnes_Email"},
+ *     message="L'email que vous avez indiqué est déjà utilisé !"
+ * )
  */
-class FRPersonnes
+class FRPersonnes implements UserInterface
 {
     /**
      * @ORM\Id
@@ -53,7 +59,7 @@ class FRPersonnes
     private $personnes_Employee;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=100)
      * @Assert\Regex("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/")
      * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimum 8 caractères")
      */
@@ -88,6 +94,7 @@ class FRPersonnes
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      */
     private $personnes_Email;
 
@@ -262,5 +269,32 @@ class FRPersonnes
         $this->personnes_Email = $personnes_Email;
 
         return $this;
+    }
+
+    public function getRoles()
+    {
+        return ['ROLE_PERSONNE'];
+    }
+
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getPassword()
+    {
+        // TODO: Implement getPassword() method.
+    }
+
+    public function getUsername()
+    {
+        // TODO: Implement getUsername() method.
     }
 }
