@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20201216154946 extends AbstractMigration
+final class Version20210107094058 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -20,12 +20,12 @@ final class Version20201216154946 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('CREATE TABLE frproducts (id INT AUTO_INCREMENT NOT NULL, products_reference VARCHAR(255) NOT NULL, products_details VARCHAR(1500) NOT NULL, products_purchase_price NUMERIC(7, 2) NOT NULL, products_sale_price NUMERIC(7, 2) NOT NULL, products_picture VARCHAR(255) DEFAULT NULL, products_stock INT NOT NULL, products_visible INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE frproducts ADD products_authors VARCHAR(255) NOT NULL, ADD products_editor VARCHAR(100) NOT NULL');
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('DROP TABLE frproducts');
+        $this->addSql('ALTER TABLE frproducts DROP products_authors, DROP products_editor');
     }
 }

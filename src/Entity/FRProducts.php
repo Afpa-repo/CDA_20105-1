@@ -20,12 +20,12 @@ class FRProducts
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=255)
      */
     private $products_reference;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=1500)
      */
     private $products_Details;
 
@@ -74,6 +74,16 @@ class FRProducts
      * @ORM\Column(type="date")
      */
     private $products_DateAdded;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $products_Authors;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $products_Editor;
 
     public function __construct()
     {
@@ -225,6 +235,30 @@ class FRProducts
     public function setProductsDateAdded(\DateTimeInterface $products_DateAdded): self
     {
         $this->products_DateAdded = $products_DateAdded;
+
+        return $this;
+    }
+
+    public function getProductsAuthors(): ?string
+    {
+        return $this->products_Authors;
+    }
+
+    public function setProductsAuthors(string $products_Authors): self
+    {
+        $this->products_Authors = $products_Authors;
+
+        return $this;
+    }
+
+    public function getProductsEditor(): ?string
+    {
+        return $this->products_Editor;
+    }
+
+    public function setProductsEditor(string $products_Editor): self
+    {
+        $this->products_Editor = $products_Editor;
 
         return $this;
     }

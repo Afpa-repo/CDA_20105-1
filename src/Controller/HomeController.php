@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
+     * @Route("/", name="home")
      * @Route("/home", name="home")
      * @Route("/home/{sort}", name="homeSort")
      * @return Response
