@@ -1,0 +1,195 @@
+Index: public/asset/css/base.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#logo {\n    position: absolute;\n    top: -45px;\n    left: -11em;\n    width: 490px;\n    z-index: 100;\n}\n/*.navbar {\n    margin-bottom: 150px;\n}*/\n\n.nav-item {\n    text-align: center;\n}\n\nul li {\n    font-size: 1.5em;\n}\n\n.container {\n    /*\n    display: block!important;\n    */\n\n}\n\n/*\n.nav-item {\n    background-image: url(\"../image/nav_titre.png\");\n    background-size: cover;\n    background-repeat: no-repeat;\n}*/\n\nfooter div a p {\n    color: white;\n}\n\n/*span {*/\n/*    color: white;*/\n/*}*/\n\n/*input[type=text]:hover {*/\n/*    width: 100%;*/\n/*}*/\n\n/*input[type=text] {*/\n/*    width: 130px;*/\n/*    -webkit-transition: width 0.4s ease-out;*/\n/*    transition: width 0.4s ease-in-out;*/\n/*}*/\n\n#email_footer {\n    width: 30%;\n    padding-left: 10%;}\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/asset/css/base.css b/public/asset/css/base.css
+--- a/public/asset/css/base.css	(revision 89afba62b87296de3eefc1b2b72612cffde76ec4)
++++ b/public/asset/css/base.css	(date 1610014680007)
+@@ -14,15 +14,10 @@
+ }
+ 
+ ul li {
+-    font-size: 1.5em;
++    font-size: 1em;
+ }
+ 
+-.container {
+-    /*
+-    display: block!important;
+-    */
+ 
+-}
+ 
+ /*
+ .nav-item {
+@@ -51,7 +46,11 @@
+ 
+ #email_footer {
+     width: 30%;
+-    padding-left: 10%;}
++    padding-left: 10%;
++}
+ 
+-
++.icone {
++    width: 50px;
++    height: auto;
++}
+ 
+Index: templates/base.html.twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>{% block title %}Welcome!{% endblock %}</title>\n    <link rel=\"stylesheet\" href=\"https://bootswatch.com/4/minty/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"{{ asset('asset/css/base.css') }}\">\n    {% block stylesheets %}{% endblock %}\n</head>\n<body>\n\n<img src=\"{{ asset('asset/image/logofilrouge.png') }}\" id=\"logo\">\n<div class=\"container-fluid\">\n\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n        {# <div class=\"container d-flex justify-content-center\">\n            <form class=\"form-inline mx-auto pl-5 my-2 my-lg-0 justify-content-center w-100\">\n                <input class=\"form-control mr-sm-2 col-8\" type=\"text\" placeholder=\"Search\">\n                <button class=\"btn btn-secondary my-2 my-sm-0 col-2\" type=\"submit\">Search</button>\n            </form>\n        </div> #}\n        <div class=\"row align-items-center d-flex justify-content-end w-100\">\n\n            <a href=\"#\"><img src=\"{{ asset('asset/image/user.png') }}\" class=\"pr-md-5 pr-2 w-75\" alt=\"\"></a>\n            <a href=\"#\"><img src=\"{{ asset('asset/image/panier.png') }}\" class=\"pr-md-5 pr-2 w-75\" alt=\"\"></a>\n            <form class=\"form-inline\">\n                <img data-toggle=\"modal\" data-target=\"#exampleModal\" class=\"w-50\"\n                     src=\"{{ asset('asset/image/loupe.svg') }}\">\n\n            </form>\n        </div>\n        <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n            <div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-header\">\n                        <h5 class=\"modal-title\" id=\"exampleModalLabel\">Recherche</h5>\n                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                            <span aria-hidden=\"true\">&times;</span>\n                        </button>\n                    </div>\n                    <div class=\"modal-body\">\n                        <input type=\"text\" name=\"search\" placeholder=\"Search..\">\n                    </div>\n                    <div class=\"modal-footer\">\n                        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Fermer</button>\n                        <button type=\"button\" class=\"btn btn-primary\">Valider</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </nav>\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n        <a class=\"navbar-brand\" href=\"#\">\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\"\n                aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">\n            <ul class=\"navbar-nav mx-auto w-100\">\n                <li class=\"nav-item active mx-auto w-75\">\n                    {# <img src=\"{{ asset('asset/image/nav_titre.png') }}\" alt=\"\" class=\"w-50\"> #}\n                    <a class=\"nav-link pr-5\" href=\"#\">Home\n                        <span class=\"sr-only\">(current)</span>\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    {# <img src=\"{{ asset('asset/image/nav_titre.png') }}\" alt=\"\" class=\"w-50\"> #}\n                    <a class=\"nav-link pr-5\" href=\"#\">Catalogue</a>\n                </li>\n                <li class=\"nav-item mx-auto w-75\">\n                    {# <img src=\"{{ asset('asset/image/nav_titre.png') }}\" alt=\"\" class=\"w-50\"> #}\n                    <a class=\"nav-link pr-5\" href=\"#\">Infos</a>\n                </li>\n            </ul>\n\n        </div>\n\n    </nav>\n    <div class=\"container m-5\">\n        {% block body %}\n\n\n\n        {% endblock %}\n    </div>\n\n</div>\n<footer class=\"container-fluid bg-primary\">\n    <div class=\"row d-flex justify-content-around col-12 my-auto align-item-center\">\n        <a href=\"#\" class=\"\">\n            <p class=\"text-center pt-5\">Mention légale</p>\n        </a>\n        <nav class=\"navbar navbar-ligh\" id=\"email_footer\">\n            <h4 class=\"d-block col-12\">Recevez nos offres exclusives</h4>\n            <form class=\"form-inline d-block\">\n                <div class=\"input-group\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"basic-addon1\">@</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Username\" aria-label=\"Username\"\n                           aria-describedby=\"basic-addon1\">\n                </div>\n            </form>\n        </nav>\n        <div class=\"align-items-center\">\n            <h4 class=\"\"><strong>Suivez-nous</strong> ici!</h4>\n            <a href=\"#\"> <img src=\"{{ asset('asset/image/twitterlogo.png') }}\" class=\" w-25\"> </a>\n            <a href=\"#\"><img src=\"{{ asset('asset/image/facebooklogo.png') }}\" class=\"w-25\"></a>\n        </div>\n    </div>\n    <div class=\"row d-flex justify-content-start col-12 my-auto\">\n        <div class=\"container col-3\">\n            <h4>Contactez-nous</h4>\n            <p>Conseil / Commande téléphone\n                du lundi au vendredi de 8h à 19h, le samedi de 10h à 18h.</p>\n            <br>\n            <p>\n                Depuis la France :\n                <strong>02 40 38 50 50</strong>\n            </p>\n            <br>\n            <p>\n                Belgique, Suisse, International :\n                <strong>0033 2 40 38 50 50</strong>\n            </p>\n            <br>\n            <p>Service après vente :\n                <strong>02 51 80 68 76</strong>\n                Contactez-nous par téléphone du lundi au samedi de 9h à 18h ou depuis votre compte client.</p>\n            <br>\n            <p>Conseils pour choisir un instrument :\n                infovg@villagegreen.com</p>\n            <br>\n            <p>\n                Service Presse :\n                contact@villagegreen.com\n            </p>\n\n        </div>\n        <div class=\"container col-3\">\n            <h4>Milles et une pages Stores</h4>\n            <p>\n                Guitares - Amplificateurs - Effets :\n                182 avenue Jean Jaurès 75019 Paris\n                <br>\n                Clavier - Home Studio - Sonorisation Equipement DJ - Eclairage :\n                184 avenue Jean Jaurès 75019 Paris\n                <br>\n                Librairie Musicale :\n                7 av. du Nouveau Conservatoire 75019 Paris\n                <br>\n                Instruments à vent :\n                9/11 av. du Nouveau Conservatoire 75019 Paris\n                <br>\n                Percussions :\n                13/15 av. du Nouveau Conservatoire 75019 Paris\n                Métro Ligne 5, station Porte de Pantin. Plan d'accès / Visite virtuelle\n            </p>\n        </div>\n        <div class=\"container col-3\">\n            <h4>Contactez-nous</h4>\n            <p>\n\n            </p>\n        </div>\n    </div>\n</footer>\n{% block javascripts %}\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"\n            integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"\n            crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\"\n            integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\"\n            crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"\n            integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\"\n            crossorigin=\"anonymous\"></script>\n{% endblock %}\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/base.html.twig b/templates/base.html.twig
+--- a/templates/base.html.twig	(revision 89afba62b87296de3eefc1b2b72612cffde76ec4)
++++ b/templates/base.html.twig	(date 1610016227638)
+@@ -8,24 +8,22 @@
+     {% block stylesheets %}{% endblock %}
+ </head>
+ <body>
+-
+ <img src="{{ asset('asset/image/logofilrouge.png') }}" id="logo">
+-<div class="container-fluid">
+-
+-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
++<div class="container-fluid px-0 mx-0">
++    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+         {# <div class="container d-flex justify-content-center">
+             <form class="form-inline mx-auto pl-5 my-2 my-lg-0 justify-content-center w-100">
+                 <input class="form-control mr-sm-2 col-8" type="text" placeholder="Search">
+                 <button class="btn btn-secondary my-2 my-sm-0 col-2" type="submit">Search</button>
+             </form>
+         </div> #}
+-        <div class="row align-items-center d-flex justify-content-end w-100">
++        <div class="row align-items-center d-flex justify-content-end w-100 px-0 mx-0">
+ 
+-            <a href="#"><img src="{{ asset('asset/image/user.png') }}" class="pr-md-5 pr-2 w-75" alt=""></a>
+-            <a href="#"><img src="{{ asset('asset/image/panier.png') }}" class="pr-md-5 pr-2 w-75" alt=""></a>
++            <a href="#"><img src="{{ asset('asset/image/user.png') }}" class="icone mr-3" alt=""></a>
++            <a href="#"><img src="{{ asset('asset/image/panier.png') }}" class="icone mr-3" alt=""></a>
+             <form class="form-inline">
+-                <img data-toggle="modal" data-target="#exampleModal" class="w-50"
+-                     src="{{ asset('asset/image/loupe.svg') }}">
++                <img data-toggle="modal" data-target="#exampleModal" class="icone mx-auto"
++                     src="{{ asset('asset/image/loupe.png') }}">
+ 
+             </form>
+         </div>
+@@ -60,7 +58,7 @@
+             <ul class="navbar-nav mx-auto w-100">
+                 <li class="nav-item active mx-auto w-75">
+                     {# <img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50"> #}
+-                    <a class="nav-link pr-5" href="#">Home
++                    <a class="nav-link pr-5" href="{{ path('home') }}">Home
+                         <span class="sr-only">(current)</span>
+                     </a>
+                 </li>
+@@ -73,9 +71,7 @@
+                     <a class="nav-link pr-5" href="#">Infos</a>
+                 </li>
+             </ul>
+-
+         </div>
+-
+     </nav>
+     <div class="container m-5">
+         {% block body %}
+@@ -85,8 +81,8 @@
+         {% endblock %}
+     </div>
+ 
+-</div>
+-<footer class="container-fluid bg-primary">
++
++<footer class="bg-primary">
+     <div class="row d-flex justify-content-around col-12 my-auto align-item-center">
+         <a href="#" class="">
+             <p class="text-center pt-5">Mention légale</p>
+@@ -105,7 +101,7 @@
+         </nav>
+         <div class="align-items-center">
+             <h4 class=""><strong>Suivez-nous</strong> ici!</h4>
+-            <a href="#"> <img src="{{ asset('asset/image/twitterlogo.png') }}" class=" w-25"> </a>
++            <a href="#"> <img src="{{ asset('asset/image/twitterlogo.png') }}" class=" w-25 w-sm-25"> </a>
+             <a href="#"><img src="{{ asset('asset/image/facebooklogo.png') }}" class="w-25"></a>
+         </div>
+     </div>
+@@ -166,6 +162,7 @@
+         </div>
+     </div>
+ </footer>
++</div>
+ {% block javascripts %}
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"BRANCH:origin/master\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </select>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"be2aced5-2763-4721-978d-af102310e878\" name=\"Default Changelist\" comment=\"TG Index2\">\n      <change afterPath=\"$PROJECT_DIR$/public/asset/pictures/produits/9782266300292.jpg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/public/asset/pictures/produits/9782302083257.jpg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/public/asset/pictures/produits/9782344040508.jpg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/public/asset/pictures/produits/9782749161419.jpg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/public/asset/pictures/produits/9782875574336.jpg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/public/asset/pictures/produits/Voûtes &amp; plafonds d'exception - De l'art au-dessus de nos têtes.jpg\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.env\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.env\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/php.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/php.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/DataFixtures/ProductFixtures.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/DataFixtures/ProductFixtures.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Entity/FRCategory.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Entity/FRCategory.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Entity/FRProducts.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Entity/FRProducts.php\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"PhpWorkspaceProjectConfiguration\">\n    <include_path>\n      <path value=\"$PROJECT_DIR$/vendor/nikic/php-parser\" />\n      <path value=\"$PROJECT_DIR$/vendor/sensio/framework-extra-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/cache-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/deprecation-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/form\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-exporter\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/monolog-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/css-selector\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-core\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php80\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/inflector\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/property-info\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/property-access\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-csrf\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/stopwatch\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/flex\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/options-resolver\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-dumper\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-foundation\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/framework-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/validator\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/dom-crawler\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/service-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/web-link\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/web-server-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/finder\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/routing\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/intl\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-client\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-client-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/monolog-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/doctrine-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/dependency-injection\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/phpunit-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/twig-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/config\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-http\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/mailer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/mime\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php72\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/debug-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/error-handler\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/filesystem\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php73\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/web-profiler-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/maker-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/webmozart/assert\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/console\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-guard\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-kernel\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/browser-kit\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/yaml\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/twig-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/serializer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/debug\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/process\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/dotenv\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/type-resolver\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/asset\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-common\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/expression-language\" />\n      <path value=\"$PROJECT_DIR$/vendor/egulias/email-validator\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/lexer\" />\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/event-manager\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/instantiator\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/dbal\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/orm\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/sql-formatter\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/doctrine-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/collections\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/persistence\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/annotations\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/inflector\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/migrations\" />\n      <path value=\"$PROJECT_DIR$/vendor/ocramius/proxy-manager\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/common\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/link\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/log\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/container\" />\n      <path value=\"$PROJECT_DIR$/vendor/monolog/monolog\" />\n      <path value=\"$PROJECT_DIR$/vendor/twig/twig\" />\n      <path value=\"$PROJECT_DIR$/vendor/twig/extra-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/zendframework/zend-eventmanager\" />\n      <path value=\"$PROJECT_DIR$/vendor/zendframework/zend-code\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/data-fixtures\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/laminas/laminas-eventmanager\" />\n      <path value=\"$PROJECT_DIR$/vendor/laminas/laminas-code\" />\n      <path value=\"$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts\" />\n      <path value=\"$PROJECT_DIR$/vendor/fzaninotto/faker\" />\n    </include_path>\n  </component>\n  <component name=\"ProjectId\" id=\"1m66Eq9AFlXpas5qWbe4UXA9jTW\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"be2aced5-2763-4721-978d-af102310e878\" name=\"Default Changelist\" comment=\"\" />\n      <created>1608801584669</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1608801584669</updated>\n      <workItem from=\"1608801585716\" duration=\"11083000\" />\n      <workItem from=\"1609752806991\" duration=\"17821000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"TG Index2\">\n      <created>1609861563151</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1609861563151</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"origin/master\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"TG Index2\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"TG Index2\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"777\" y=\"434\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1609757051358\">\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\n    </state>\n    <state x=\"777\" y=\"434\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040\" timestamp=\"1609757051358\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 89afba62b87296de3eefc1b2b72612cffde76ec4)
++++ b/.idea/workspace.xml	(date 1610016227715)
+@@ -27,26 +27,19 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="be2aced5-2763-4721-978d-af102310e878" name="Default Changelist" comment="TG Index2">
+-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/produits/9782266300292.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/produits/9782302083257.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/produits/9782344040508.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/produits/9782749161419.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/produits/9782875574336.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/produits/Voûtes &amp; plafonds d'exception - De l'art au-dessus de nos têtes.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ProductFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ProductFixtures.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Entity/FRCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRCategory.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Entity/FRProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRProducts.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/public/asset/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/asset/css/base.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/public/asset/image/loupe.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/asset/image/loupe.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/public/asset/image/panier.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/asset/image/panier.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/public/asset/image/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/asset/image/user.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="ComposerSettings">
++  <component name="ComposerSettings" doNotAsk="true">
+     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+     <execution />
+   </component>
+@@ -182,6 +175,13 @@
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="node.js.detected.package.eslint" value="true" />
++    <property name="node.js.detected.package.tslint" value="true" />
++    <property name="node.js.path.for.package.eslint" value="project" />
++    <property name="node.js.path.for.package.tslint" value="project" />
++    <property name="node.js.selected.package.eslint" value="(autodetect)" />
++    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+     <property name="nodejs_package_manager_path" value="npm" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+@@ -195,6 +195,7 @@
+       <updated>1608801584669</updated>
+       <workItem from="1608801585716" duration="11083000" />
+       <workItem from="1609752806991" duration="17821000" />
++      <workItem from="1610009481623" duration="3505000" />
+     </task>
+     <task id="LOCAL-00001" summary="TG Index2">
+       <created>1609861563151</created>
