@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class FRPersonnesController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="security_registration")
+     * @Route("/inscription", name="registration")
      * @param Request $request
      * @param UserPasswordEncoderInterface $encoder
      * @return Response
@@ -35,6 +35,8 @@ class FRPersonnesController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($personne);
             $entityManager->flush();
+
+//            return $this-> redirectToRoute(/);
         }
 
         return $this->render('personnes/registration.html.twig', [
@@ -43,9 +45,12 @@ class FRPersonnesController extends AbstractController
         ]);
     }
 
-    public function login()
+    /**
+     * @Route("/connection", name="connexion")
+     */
+    public function login(): Response
     {
-        return $this->render('personnes/login.html.twig');
+        return $this->render('personnes/connexion.html.twig');
     }
 }
 
