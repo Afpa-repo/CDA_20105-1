@@ -49,9 +49,9 @@
                 </ul>
             </div>
             <div class="card-body d-flex row d-flex align-items-center justify-content-center" >
-                {# Boucle des produits du HomeController //#}
-                {#{% for product in products %}#}
-                    {#<div class="card col-12 col-m-4 mx-auto my-2 px-0" style="max-width: 540px; max-height: 540px;">
+{#                 Boucle des produits du HomeController //#}
+                {% for product in products %}
+                    <div class="card col-12 col-m-4 mx-auto my-2 px-0" style="max-width: 540px; max-height: 540px;">
                         <div class="row no-gutters">
                             <div class="col-4 d-flex align-items-center">
                                 <img class="card-img img-fluid m-2"  src="http://placehold.it/250x350" alt="Card image">
@@ -65,8 +65,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>#}
-                {#{% endfor %}#}
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
