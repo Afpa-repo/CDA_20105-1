@@ -21,7 +21,7 @@ class HomeController extends AbstractController
     {
 //        $repo = $this->getDoctrine()->getRepository(FRCategory::class);
         $categorys = $repoCate->findAll();
-        $products = $repoProdu->findAll();
+/*        $products = $repoProdu->findAll();*/
         $title = 'Nos nouveautés du mois';
         if($sort > 1) {
             $title = 'Nos livres les mieux notés';
@@ -29,7 +29,7 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'categorys' => $categorys,
-            'products' => $products,
+            /*'products' => $products,*/
             'title' => $title,
             'sort' => $sort
         ]);

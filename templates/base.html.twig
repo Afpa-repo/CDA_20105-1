@@ -8,24 +8,22 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-
-<img src="{{ asset('asset/image/logofilrouge.png') }}" id="logo">
-<div class="container-fluid">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<img src="{{ asset('asset/pictures/others/icone/logofilrouge.png') }}" id="logo">
+<div class="container-fluid px-0 mx-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         {# <div class="container d-flex justify-content-center">
             <form class="form-inline mx-auto pl-5 my-2 my-lg-0 justify-content-center w-100">
                 <input class="form-control mr-sm-2 col-8" type="text" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0 col-2" type="submit">Search</button>
             </form>
         </div> #}
-        <div class="row align-items-center d-flex justify-content-end w-100">
+        <div class="row align-items-center d-flex justify-content-end w-100 px-0 mx-0">
 
-            <a href="#"><img src="{{ asset('asset/image/user.png') }}" class="pr-md-5 pr-2 w-75" alt=""></a>
-            <a href="#"><img src="{{ asset('asset/image/panier.png') }}" class="pr-md-5 pr-2 w-75" alt=""></a>
+            <a href="#"><img src="{{ asset('asset/pictures/others/icone/user.png') }}" class="icone mr-3" alt=""></a>
+            <a href="#"><img src="{{ asset('asset/pictures/others/icone/panier.png') }}" class="icone mr-3" alt=""></a>
             <form class="form-inline">
-                <img data-toggle="modal" data-target="#exampleModal" class="w-50"
-                     src="{{ asset('asset/image/loupe.svg') }}">
+                <img data-toggle="modal" data-target="#exampleModal" class="icone mx-auto"
+                     src="{{ asset('asset/pictures/others/icone/loupe.png') }}">
 
             </form>
         </div>
@@ -60,24 +58,33 @@
             <ul class="navbar-nav mx-auto w-100">
                 <li class="nav-item active mx-auto w-75">
                     {# <img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50"> #}
-                    <a class="nav-link pr-5" href="#">Home
+                    <a class="nav-link pr-5" href="{{ path('home') }}">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ path('catalogue') }}"
+                       role="button" aria-haspopup="true" aria-expanded="false">Catalogue</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
                 <li class="nav-item">
                     {# <img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50"> #}
-                    <a class="nav-link pr-5" href="#">Catalogue</a>
+                    <a class="nav-link pr-5" href=""></a>
                 </li>
                 <li class="nav-item mx-auto w-75">
                     {# <img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50"> #}
                     <a class="nav-link pr-5" href="#">Infos</a>
                 </li>
             </ul>
-
         </div>
-
     </nav>
-    <div class="container m-5">
+    <div class="container">
         {% block body %}
 
 
@@ -85,32 +92,39 @@
         {% endblock %}
     </div>
 
-</div>
-<footer class="container-fluid bg-primary">
-    <div class="row d-flex justify-content-around col-12 my-auto align-item-center">
-        <a href="#" class="">
-            <p class="text-center pt-5">Mention légale</p>
-        </a>
-        <nav class="navbar navbar-ligh" id="email_footer">
-            <h4 class="d-block col-12">Recevez nos offres exclusives</h4>
-            <form class="form-inline d-block">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                           aria-describedby="basic-addon1">
+
+<footer class="bg-primary">
+
+    <div class="row pt-2">
+        <div class="col-8">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-center flex-column align-items-center">
+                    <h4 class="">Recevez nos offres exclusives</h4>
+                    <form class="form-inline ">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </nav>
-        <div class="align-items-center">
-            <h4 class=""><strong>Suivez-nous</strong> ici!</h4>
-            <a href="#"> <img src="{{ asset('asset/image/twitterlogo.png') }}" class=" w-25"> </a>
-            <a href="#"><img src="{{ asset('asset/image/facebooklogo.png') }}" class="w-25"></a>
+                <div class="col-6 d-flex justify-content-center flex-column align-items-center">
+                    <h4 class=""><strong>Suivez-nous</strong> ici!</h4>
+                    <div class="flex-column">
+                        <a href="#"><img src="{{ asset('asset/pictures/others/icone/twitterlogo.png') }}" class="icone"></a>
+                        <a href="#"><img src="{{ asset('asset/pictures/others/icone/facebooklogo.png') }}" class="icone"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 d-flex justify-content-center flex-column align-items-center">
+            <img src="{{ asset('asset/image/tab_paiement.png') }}" class="pub" title="" alt="">
         </div>
     </div>
-    <div class="row d-flex justify-content-start col-12 my-auto">
-        <div class="container col-3">
+    <div class="row flex-column flex-sm-row d-flex justify-content-around mt-5">
+        <div class="container col-xl-3 col-sm-12">
             <h4>Contactez-nous</h4>
             <p>Conseil / Commande téléphone
                 du lundi au vendredi de 8h à 19h, le samedi de 10h à 18h.</p>
@@ -138,7 +152,7 @@
             </p>
 
         </div>
-        <div class="container col-3">
+        <div class="container col-xl-3 col-sm-12">
             <h4>Milles et une pages Stores</h4>
             <p>
                 Guitares - Amplificateurs - Effets :
@@ -158,7 +172,7 @@
                 Métro Ligne 5, station Porte de Pantin. Plan d'accès / Visite virtuelle
             </p>
         </div>
-        <div class="container col-3">
+        <div class="container col-xl-3 col-sm-12">
             <h4>Contactez-nous</h4>
             <p>
 
@@ -166,6 +180,7 @@
         </div>
     </div>
 </footer>
+</div>
 {% block javascripts %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

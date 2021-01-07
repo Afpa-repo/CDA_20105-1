@@ -14,15 +14,10 @@
 }
 
 ul li {
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
-.container {
-    /*
-    display: block!important;
-    */
 
-}
 
 /*
 .nav-item {
@@ -51,7 +46,15 @@ footer div a p {
 
 #email_footer {
     width: 30%;
-    padding-left: 10%;}
+    padding-left: 10%;
+}
 
+.icone {
+    width: 50px;
+    height: auto;
+}
 
-
+.pub {
+    width: 200px;
+    height: auto;
+}
