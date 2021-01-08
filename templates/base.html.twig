@@ -19,7 +19,7 @@
         </div> #}
         <div class="row align-items-center d-flex justify-content-end w-100 px-0 mx-0">
 
-            <a href="#"><img src="{{ asset('asset/pictures/others/icone/user.png') }}" class="icone mr-3" alt=""></a>
+            <a href="{{ path('connexion') }}"><img src="{{ asset('asset/pictures/others/icone/user.png') }}" class="icone mr-3" alt=""></a>
             <a href="#"><img src="{{ asset('asset/pictures/others/icone/panier.png') }}" class="icone mr-3" alt=""></a>
             <form class="form-inline">
                 <img data-toggle="modal" data-target="#exampleModal" class="icone mx-auto"
@@ -62,24 +62,13 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ path('catalogue') }}"
-                       role="button" aria-haspopup="true" aria-expanded="false">Catalogue</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
                 <li class="nav-item">
                     {# <img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50"> #}
-                    <a class="nav-link pr-5" href=""></a>
+                    <a class="nav-link pr-5" href="{{ path('catalogue') }}">Catalogue</a>
                 </li>
                 <li class="nav-item mx-auto w-75">
                     {# <img src="{{ asset('asset/image/nav_titre.png') }}" alt="" class="w-50"> #}
-                    <a class="nav-link pr-5" href="#">Infos</a>
+                    <a class="nav-link pr-5" href="{{ path('infos') }}">Infos</a>
                 </li>
             </ul>
         </div>
