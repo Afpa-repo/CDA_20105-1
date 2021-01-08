@@ -35,7 +35,6 @@ class FRPersonnesController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($personne);
             $entityManager->flush();
-
 //            return $this-> redirectToRoute(/);
         }
 
@@ -43,6 +42,7 @@ class FRPersonnesController extends AbstractController
             'personne' => $personne,
             'form' => $form->createView()
         ]);
+
     }
 
     /**

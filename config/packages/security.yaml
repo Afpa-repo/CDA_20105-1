@@ -20,8 +20,7 @@ security:
       anonymous: lazy
       provider: from_database
       form_login:
-        check_path: /inscription
-
+        check_path: connexion
 
 
     # activate different ways to authenticate
