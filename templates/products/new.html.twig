@@ -3,9 +3,10 @@
 {% block title %}New FRProducts{% endblock %}
 
 {% block body %}
-    <h1>Create new FRProducts</h1>
+    <div class="container my-5">    <h1>Create new FRProducts</h1>
 
     {{ include('products/_form.html.twig') }}
-
     <a href="{{ path('products_index') }}">back to list</a>
+
+    </div>
 {% endblock %}

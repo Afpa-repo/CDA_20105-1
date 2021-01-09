@@ -25,7 +25,7 @@ class FRProducts
     private $products_reference;
 
     /**
-     * @ORM\Column(type="string", length=1500)
+     * @ORM\Column(type="string", length=5500)
      */
     private $products_Details;
 

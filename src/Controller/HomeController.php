@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
-use App\Repository\FRCategoryRepository;
+use Doctrine\ORM\EntityRepository;
 use App\Repository\FRProductsRepository;
+use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Date;
 
 
 class HomeController extends AbstractController
@@ -15,23 +17,40 @@ class HomeController extends AbstractController
      * @Route("/", name="home")
      * @Route("/home", name="home")
      * @Route("/home/{sort}", name="homeSort")
+     * @param FRProductsRepository $fRProductsRepository
+     * @param int $sort
      * @return Response
      */
-    public function index($sort = 1,FRCategoryRepository $repoCate, FRProductsRepository $repoProdu): Response
+    public function index(int $sort = 1, FRProductsRepository $fRProductsRepository): Response
     {
-//        $repo = $this->getDoctrine()->getRepository(FRCategory::class);
-        $categorys = $repoCate->findAll();
-/*        $products = $repoProdu->findAll();*/
-        $title = 'Nos nouveautés du mois';
+//       $repo = $this->getDoctrine()->getRepository(FRCategory::class);
+        $products = $fRProductsRepository->findAll();
+        $month = (int) date('m');
+        $year = (int) date('Y');
+        $beginDate = new \DateTimeImmutable("$year-$month-01T00:00:00");
+        $endDate = $beginDate->modify('last day of this month')->setTime(23, 59, 59);
+        $newProducts = $this->findItemsCreatedBetweenTwoDates($beginDate, $endDate, $fRProductsRepository);
+        $title = 'Les nouveautés du mois';
         if($sort > 1) {
-            $title = 'Nos livres les mieux notés';
+            $title = 'les livres les mieux notés';
         }
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'categorys' => $categorys,
-            /*'products' => $products,*/
+            'products' => $products,
+            'newProducts' => $newProducts,
             'title' => $title,
             'sort' => $sort
         ]);
+    }
+
+    public function findItemsCreatedBetweenTwoDates(\DateTimeImmutable $beginDate, \DateTimeImmutable $endDate, FRProductsRepository $fRProductsRepository)
+    {
+        return $fRProductsRepository->createQueryBuilder('m')
+            ->where("m.products_DateAdded > ?1")
+            ->andWhere("m.products_DateAdded < ?2")
+            ->setParameter(1, $beginDate)
+            ->setParameter(2, $endDate)
+            ->getQuery()
+            ->getResult();
     }
 }

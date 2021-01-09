@@ -35,10 +35,16 @@ class FRProductsController extends AbstractController
     public function new(Request $request): Response
     {
         $fRProduct = new FRProducts();
+        $fRProduct->setProductsPicture("NoImg.jpg");
+        $fRProduct->setProductsAuthors("Inconnu");
         $form = $this->createForm(FRProductsType::class, $fRProduct);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
+            $fRProduct->setProductsDateAdded(new \DateTime());
+            $fRProduct->setProductsAverageGrade(0);
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($fRProduct);
             $entityManager->flush();

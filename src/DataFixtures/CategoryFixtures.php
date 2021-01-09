@@ -8,7 +8,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
 
-class CategoryFixtures extends Fixturec Seguin, 94015 Créteil
+class CategoryFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
