@@ -19,45 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da8f3e39-2f8d-4653-8929-62361a09fa0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210108230958.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782266300292.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782302083233.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782302083257.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782344040508.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782409027567.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782749161419.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782862538884.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9782875574336.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/9791026818656.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/pictures/products/NoImg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CDA_20105-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CDA_20105-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2021_09_01__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2021_09_01__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2021_16_32__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2021_16_32__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2021_08_43__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2021_08_43__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_01_2021_08_49__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_01_2021_08_49__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_01_2021_10_49__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_01_2021_10_49__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2021_08_39__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2021_08_39__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="da8f3e39-2f8d-4653-8929-62361a09fa0c" name="Default Changelist" comment="TG NewProduct">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asset/pictures/produits/9782266300292.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asset/pictures/produits/9782302083257.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asset/pictures/produits/9782344040508.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asset/pictures/produits/9782749161419.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asset/pictures/produits/9782875574336.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asset/pictures/produits/Voûtes &amp; plafonds d'exception - De l'art au-dessus de nos têtes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FRProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FRProductsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/FRProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRProducts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/FRProductsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FRProductsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,8 +173,16 @@
       <updated>1610100621793</updated>
       <workItem from="1610100623610" duration="9026000" />
       <workItem from="1610135417113" duration="11793000" />
-      <workItem from="1610187189420" duration="3931000" />
+      <workItem from="1610187189420" duration="4745000" />
     </task>
+    <task id="LOCAL-00001" summary="TG NewProduct">
+      <created>1610191151284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610191151284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,11 +202,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="TG NewProduct" />
+    <option name="LAST_COMMIT_MESSAGE" value="TG NewProduct" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610105474313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610105474313" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610191160316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610191160316" />
   </component>
 </project>

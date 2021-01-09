@@ -24,20 +24,22 @@ class HomeController extends AbstractController
     public function index(int $sort = 1, FRProductsRepository $fRProductsRepository): Response
     {
 //       $repo = $this->getDoctrine()->getRepository(FRCategory::class);
-        $products = $fRProductsRepository->findAll();
-        $month = (int) date('m');
-        $year = (int) date('Y');
-        $beginDate = new \DateTimeImmutable("$year-$month-01T00:00:00");
-        $endDate = $beginDate->modify('last day of this month')->setTime(23, 59, 59);
-        $newProducts = $this->findItemsCreatedBetweenTwoDates($beginDate, $endDate, $fRProductsRepository);
-        $title = 'Les nouveautés du mois';
-        if($sort > 1) {
+        $products = null;
+        if($sort === 1) {
+            $month = (int) date('m');
+            $year = (int) date('Y');
+            $beginDate = new \DateTimeImmutable("$year-$month-01T00:00:00");
+            $endDate = $beginDate->modify('last day of this month')->setTime(23, 59, 59);
+            $products = $this->findItemsCreatedBetweenTwoDates($beginDate, $endDate, $fRProductsRepository);
+            $title = 'Les nouveautés du mois';
+        }
+        else if($sort === 2) {
+            $products = $this->findItemsAverageGrade($fRProductsRepository);
             $title = 'les livres les mieux notés';
         }
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'products' => $products,
-            'newProducts' => $newProducts,
             'title' => $title,
             'sort' => $sort
         ]);
@@ -45,11 +47,19 @@ class HomeController extends AbstractController
 
     public function findItemsCreatedBetweenTwoDates(\DateTimeImmutable $beginDate, \DateTimeImmutable $endDate, FRProductsRepository $fRProductsRepository)
     {
-        return $fRProductsRepository->createQueryBuilder('m')
-            ->where("m.products_DateAdded > ?1")
-            ->andWhere("m.products_DateAdded < ?2")
+        return $fRProductsRepository->createQueryBuilder('Products')
+            ->where("Products.products_DateAdded > ?1")
+            ->andWhere("Products.products_DateAdded < ?2")
             ->setParameter(1, $beginDate)
             ->setParameter(2, $endDate)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findItemsAverageGrade(FRProductsRepository $fRProductsRepository)
+    {
+        return $fRProductsRepository->createQueryBuilder('Products')
+            ->where("Products.products_AverageGrade > 3")
             ->getQuery()
             ->getResult();
     }
