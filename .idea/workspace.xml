@@ -16,12 +16,32 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/ZB" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da8f3e39-2f8d-4653-8929-62361a09fa0c" name="Default Changelist" comment="TG NewProduct">
+    <list default="true" id="da8f3e39-2f8d-4653-8929-62361a09fa0c" name="Default Changelist" comment="zb connection pas fonctionelle">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_01_2021_10_36_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_01_2021_10_36__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/personnes/profil.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210105133401.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210105133401.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FRPersonnesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FRPersonnes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personnes/connexion.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personnes/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personnes/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personnes/registration.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +165,9 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mmZFDmqytPY6AU3kHN4Xrphfe1" />
@@ -193,7 +216,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/ZB" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -203,7 +238,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="TG NewProduct" />
-    <option name="LAST_COMMIT_MESSAGE" value="TG NewProduct" />
+    <MESSAGE value="zb connection pas fonctionelle" />
+    <option name="LAST_COMMIT_MESSAGE" value="zb connection pas fonctionelle" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610105474313">

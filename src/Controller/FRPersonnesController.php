@@ -35,7 +35,7 @@ class FRPersonnesController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($personne);
             $entityManager->flush();
-//            return $this-> redirectToRoute(/);
+            return $this-> redirectToRoute('login');
         }
 
         return $this->render('personnes/registration.html.twig', [
@@ -46,12 +46,17 @@ class FRPersonnesController extends AbstractController
     }
 
     /**
-     * @Route("/connection", name="connexion")
+     * @Route("/connection", name="login")
      */
     public function login(): Response
     {
-        return $this->render('personnes/connexion.html.twig');
+        return $this->render('personnes/login.html.twig');
     }
+
+    /**
+     * @Route("/deconnection", name="logout")
+     */
+    public function logout(){}
 }
 
 

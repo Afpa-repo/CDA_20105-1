@@ -2,20 +2,18 @@
 
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
-{% block title %}Connexion/Inscription{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    <h1 class="m-5 text-center">Inscription / Connexion </h1>
+    <div>
+        <h1>Inscription</h1>
 
-        <div >
-            <h1>Inscription</h1>
-
-            {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <button type="submit" class="btn btn-success mb-3">Inscription !</button>
-            <a class="btn btn-success mb-3" href="{{ path('connexion') }}" role="button">Déjà inscrit ?</a>
-            {{ form_end(form) }}
-        </div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-success mb-3">Inscription !</button>
+        <a class="btn btn-success mb-3" href="{{ path('login') }}" role="button">Déjà inscrit ?</a>
+        {{ form_end(form) }}
+    </div>
 
 {% endblock %}
 

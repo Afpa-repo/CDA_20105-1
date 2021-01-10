@@ -19,7 +19,15 @@
         </div> #}
         <div class="row align-items-center d-flex justify-content-end w-100 px-0 mx-0">
 
-            <a href="#"><img src="{{ asset('asset/pictures/others/icone/user.png') }}" class="icone mr-3" alt=""></a>
+            {% if not app.user %}
+                <a href="{{ path('login') }}"><img src="{{ asset('asset/pictures/others/icone/user.png') }}"
+                                                   class="icone mr-3" alt=""></a>
+            {% else %}
+                <a href="{{ path('logout') }}"><img src="{{ asset('asset/pictures/others/icone/user.png') }}"
+                                                    class="icone mr-3" alt=""></a> <a href="#"><img
+                        src="{{ asset('asset/pictures/others/icone/panier.png') }}" class="icone mr-3" alt=""></a>
+            {% endif %}
+
             <a href="#"><img src="{{ asset('asset/pictures/others/icone/panier.png') }}" class="icone mr-3" alt=""></a>
             <form class="form-inline">
                 <img data-toggle="modal" data-target="#exampleModal" class="icone mx-auto"

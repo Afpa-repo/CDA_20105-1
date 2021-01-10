@@ -20,7 +20,12 @@ security:
       anonymous: lazy
       provider: from_database
       form_login:
-        check_path: connexion
+        login_path: login
+        check_path: login
+
+      logout:
+        path: logout
+        target: home
 
 
     # activate different ways to authenticate
