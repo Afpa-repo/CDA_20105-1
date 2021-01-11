@@ -12,6 +12,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class FRPersonnesController extends AbstractController
 {
+
     /**
      * @Route("/inscription", name="registration")
      * @param Request $request

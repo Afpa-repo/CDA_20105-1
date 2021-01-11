@@ -14,8 +14,7 @@ use Symfony\Component\Validator\Constraints\Date;
 class HomeController extends AbstractController
 {
     /**
-//     * @Route("/", name="home")
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      * @Route("/home/{sort}", name="homeSort")
      * @param FRProductsRepository $fRProductsRepository
      * @param int $sort
